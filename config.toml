@@ -1,0 +1,19 @@
+[database]
+host = "localhost"
+database = "products_db"
+user = "bob"
+password = "bob123"
+
+[api]
+max_retries = 3
+retry_delay = 5
+page_size = 2000
+
+[processing]
+num_fetcher_threads = 24    
+num_parser_threads = 2
+batch_size = 700
+
+[files]
+category_ids_file = "categoryids.txt"
+log_file = "app.log"
