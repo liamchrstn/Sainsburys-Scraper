@@ -3,17 +3,25 @@ host = "localhost"
 database = "products_db"
 user = "bob"
 password = "bob123"
+mysqltablename = "products"
 
 [api]
-max_retries = 3
-retry_delay = 5
+max_retries = 1
+retry_delay = 30
 page_size = 2000
 
 [processing]
-num_fetcher_threads = 24    
+num_fetcher_threads = 24  
 num_parser_threads = 2
-batch_size = 700
+batch_size = 1000
 
 [files]
 category_ids_file = "categoryids.txt"
+category_names_file = "categorynames.txt"
 log_file = "app.log"
+
+
+[features]
+fetch_new_category_ids = true 
+save_category_names = true
+process_category_names = true

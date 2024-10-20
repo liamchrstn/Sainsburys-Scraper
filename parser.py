@@ -7,7 +7,8 @@ Returns:
 """
 def parse_product_data(products):
     parsed_products = []
-    
+    category_names = set() # Use a set directly for unique names
+
     for product in products:
         # Extract required fields with fallbacks
         product_uid = product.get('product_uid', 'N/A')
@@ -20,6 +21,10 @@ def parse_product_data(products):
             eans = ','.join(eans)
         elif eans is None:
             eans = ''
+
+        # Extract category names
+        for category in product.get('categories', []):
+            category_names.add(category.get('name', 'N/A'))
 
         # Default to no discount and no price if not available
         discounted_price = None
@@ -66,9 +71,9 @@ def parse_product_data(products):
             'original_price': original_price,
             'discounted_price': discounted_price if discounted_price and discounted_price != original_price else None,
             'eans': eans,
-            'full_url': full_url
+            'full_url': full_url 
         }
 
         parsed_products.append(product_info)
 
-    return parsed_products
+    return parsed_products, category_names

@@ -6,11 +6,11 @@ import toml
 with open('config.toml', 'r') as f:
     config = toml.load(f)
 
-def setup_logging(console_level=logging.WARNING, file_level=logging.INFO, log_file='app.log'): # Changed console level to WARNING
+def setup_logging(console_level=logging.CRITICAL, file_level=logging.DEBUG, log_file='app.log'):
     logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
-    file_handler = logging.FileHandler(log_file, mode='w')
+    file_handler = logging.FileHandler(log_file, mode='w', encoding='utf-8')
     file_handler.setLevel(file_level)
     file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - [%(threadName)s] - %(filename)s:%(lineno)d - %(message)s')
     file_handler.setFormatter(file_formatter)
