@@ -37,14 +37,19 @@
 15. Threaded it nicely - had parsing and querying on different threads.
 16. Used EAN numbers to compare with other projects.
 17. rewrote some of the more sloppy parts to make it more understandable
-
+18. Fix EANs numbering
+19. before searching by ids use taxonomy and tree to get up to date data
+20. searches by category ids then search by category names
+21. saves new category names that are now found during parse to txt file for later searches
+22. wrote some analysis code to find best deals etc
+23. wrote a live terminal display with speed time elapsed etc
+24. changed logging to show less data unless in debug mode for simpler error finding
 
 ## To Do
-
-1. Fix EANs numbering
-2. Use normal category search along with category ID search to find the missing products
-3. If a known product ID is not found in the category search, search for it individually and figure out why it didn't show up.
-4. Have a different database for each run instead of overwriting each time so we can maintain a history of items.
+1. Change how we save the databases: if there is one with the current date, do as normal; if there is none for that day, make a new one saved as ddmmyy.
+2. Create a master database that has products from all searches.
+3. Be able to compare prices between tables.
+4. If a known product ID is not found in the category search via the master table, search for it individually and figure out why it didn't show up.
 5. Inform the user of good deals/info.
 6. Host and serve.
 
