@@ -1,8 +1,8 @@
 [database]
 host = "localhost"
 database = "products_db"
-user = "bob"
-password = "bob123"
+user = "example"
+password = "password"
 mysqltablename = "products"
 
 [api]

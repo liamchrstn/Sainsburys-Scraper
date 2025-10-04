@@ -1,0 +1,11 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+app.log
+
+# Virtual environments
+.venv/
+venv/

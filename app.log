@@ -1,7 +1,0 @@
-2024-10-20 14:28:43,963 - INFO - [MainThread] - obtain_recent_categories.py:58 - Category IDs written to categoryids.txt 
- 2266 total IDs, 0 new IDs added.
-2024-10-20 14:28:44,004 - INFO - [Category-Saver] - db_handler.py:77 - Category name saver thread started.
-2024-10-20 14:28:58,843 - WARNING - [Fetcher-6] - query.py:62 - Request failed for search term 1019007, page 1. Attempt 1/1: 500 Server Error: Internal Server Error for url: https://www.sainsburys.co.uk/groceries-api/gol-services/product/v1/product?filter%5Bkeyword%5D=&filter%5Bcategory%5D=1019007&browse=true&page_number=1&page_size=2000
-2024-10-20 14:28:58,843 - ERROR - [Fetcher-6] - query.py:66 - Max retries reached for search term 1019007, page 1 NO SEARCH MADE.
-2024-10-20 14:29:10,949 - WARNING - [Fetcher-13] - query.py:62 - Request failed for search term 1019353, page 1. Attempt 1/1: 500 Server Error: Internal Server Error for url: https://www.sainsburys.co.uk/groceries-api/gol-services/product/v1/product?filter%5Bkeyword%5D=&filter%5Bcategory%5D=1019353&browse=true&page_number=1&page_size=2000
-2024-10-20 14:29:10,949 - ERROR - [Fetcher-13] - query.py:66 - Max retries reached for search term 1019353, page 1 NO SEARCH MADE.
